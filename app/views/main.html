@@ -1,0 +1,41 @@
+<main class="site-main">
+  <div class="content-container">
+    <article class="home__single-post">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 home__single-post-inner wow fadeIn" data-wow-delay="2s">
+            <div class="home__single-post-share_link">
+              <a href="#" class="home__single-post-share_link-border-link">
+                <i class="home__single-post-share_link-ico"></i>
+              </a>
+            </div>
+            <h2 class="home__single-post-color-title">{{ post.title }}</h2>
+            <p class="home__single-post-by-autor">by <span class="home__single-post-by-autor-border">Waark</span></p>
+            <p class="home__single-post-description">
+              {{ post.description }}
+            </p>
+          </div>
+          <div class="col-lg-8 home__single-post-content load-animate">
+            <div class="home__single-post-top-container">
+              <h1 class="home__single-post-content-title">Site Of The Day</h1>
+              <span class="home__single-post-content-date">{{ post.date | date: mediumDate }}</span>
+            </div>
+            <div class="home__single-post-wrap-link">
+              <a href="#">
+                <img src="{{ post.imgsrc }}" alt="" class="img-responsive">
+              </a>
+            </div>
+
+            <!-- Right button -->
+            <a ng-href="#/posts" class="wow fadeIn" data-wow-delay="2s">
+              <div class="wrap-right-button">
+                <span class="wrap-right-button__text">previous SOTDs</span>
+                <i class="wrap-right-button__ico"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</main>

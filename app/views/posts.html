@@ -1,0 +1,45 @@
+<main class="site-main">
+    <div class="content-container content-bordered wow slideInRight" data-wow-delay="0.1s">
+        <div class="content-left">
+            <div class="container-fluid">
+                <div class="row">
+                    <article ng-repeat="post in data" class="content__post  col-sm-3 wow slideInRight" data-wow-delay="0.{{ 3 + $index+1 }}s">
+                        <div class="content__post-top-date">
+                            {{ post.date | date: mediumDate }}
+                        </div>
+                        <div class="content__post-img">
+                            <img src="{{ post.imgsrc }}" alt="" class="img-responsive center-block">
+                        </div>
+                        <div class="content__post-description">
+                            <div class="home__single-post-share_link">
+                                <a ng-href="#" class="home__single-post-share_link-border-link">
+                                    <i class="home__single-post-share_link-ico"></i>
+                                </a>
+                            </div>
+                            <div class="content__post-wrap">
+                                <h2 class="content__post-title">{{ post.title }}</h2>
+                                <p class="home__single-post-by-autor">by <span class="home__single-post-by-autor-border">{{ post.author }}</span></p>
+                                <p class="content__post-description-text">
+                                    {{ post.description }}
+                                </p>
+                                <a ng-href="#/posts/{{ $index }}" class="content__post-description-link">Show more details</a>
+                            </div>
+                        </div>
+
+                        <!-- Top paginator -->
+                        <div class="content__post-wrap-paginator">
+                            <div class="content__post-wrap-paginator_inner"></div>
+                        </div>
+
+                    </article>
+
+                    <!-- Right button -->
+                    <div class="wrap-right-button wow fadeIn" data-wow-delay="2s">
+                        <span class="wrap-right-button__text">drag me to the left</span>
+                        <i style="transform: rotate(-180deg)" class="wrap-right-button__ico"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
